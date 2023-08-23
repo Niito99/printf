@@ -54,8 +54,9 @@ int convert3(va_list list)
 	int d;
 
 	d = va_arg(list, int);
-	write(1, &d, sizeof(d));
-	return (0);
+	d = d + 48;
+	write(1, d, 1);
+	return (1);
 
 
 }
