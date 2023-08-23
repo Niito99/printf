@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * convert1 - handles the char conversion specifier
+ * @list: a variadic function macro
+ * Return: the amount of byte written to std out
+ */
 
 int convert1(va_list list)
 {
@@ -10,6 +15,11 @@ int convert1(va_list list)
 	return (i);
 
 }
+/**
+ * convert2 - handles the string conversion specifier
+ * @list: a variadic funciton macro
+ * Return: the amount of byte written to std out
+ */
 
 int convert2(va_list list)
 {
@@ -22,10 +32,13 @@ int convert2(va_list list)
 		len++;
 
 	write(1, s, len);
-	return(len);
-
-	
+	return (len);
 }
+/**
+ * convert - prints % to std out
+ *
+ * Return: 1
+ */
 
 int convert(void)
 {
