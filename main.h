@@ -4,9 +4,15 @@
 /* libraries */
 #include <unistd.h>
 #include <stdarg.h>
+#include <stddef.h>
 
 /* Prototypes */
 int count(const char *);
 int _printf(const char *format, ...);
+int convert1(va_list list);
+int convert2(va_list list);
+int convert(void);
+int convert3(va_list list);
+
 
 #endif

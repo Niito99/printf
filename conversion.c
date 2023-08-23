@@ -48,3 +48,15 @@ int convert(void)
 
 	return (i);
 }
+
+int convert3(va_list list)
+{
+	int d;
+
+	d = va_arg(list, int);
+	write(1, &d, sizeof(d));
+	return (0);
+
+
+}
+

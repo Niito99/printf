@@ -7,9 +7,6 @@
  * converstion throught the conv specifier
  * Return: character printed to std out
  */
-int convert(void);
-int convert1(va_list list);
-int convert2(va_list list);
 
 
 int _printf(const char *format, ...)
@@ -45,6 +42,10 @@ int _printf(const char *format, ...)
 			else if (*format == 's')
 			{
 				value += convert2(list);
+			}
+			if (*format == 'd' || *format == 'i')
+			{
+				value += convert3(list);
 			}
 
 		}
