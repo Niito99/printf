@@ -52,10 +52,9 @@ int convert(void)
 int convert3(va_list list)
 {
 	int d;
-
 	d = va_arg(list, int);
 
-	write(1, %d, 1);
+	write(1, &d, 1);
 	return (1);
 
 
