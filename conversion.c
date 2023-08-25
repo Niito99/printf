@@ -64,46 +64,24 @@ int convert(void)
 int convert3(va_list list)
 {
 	int d;
-	d = va_arg(list, int);
 
+	d = va_arg(list, int);
 	write(1, &d, 1);
 	return (1);
 
 
 }
+/**
+ * convert4 - handles special conversion for %char
+ * @format: takes in the string format from _printf
+ * Return: the number of bytes written to stdout plus 1
+ */
 
 int convert4(const char *format)
 {
 	int i;
-	
+
 	i = write(1, "%", 1);
 	i += write(1, format, 1);
 	return (i + 1);
-}
-
-int check_args(const char *ch)
-{
-
-	ch++;
-	if (*ch == '\0')
-		return (-1);
-	else
-	{
-		if (*ch == 'c')
-		{
-			return (0);
-		}
-		else if (*ch == 's')
-		{
-			return (0);
-		}
-		else if (*ch == '%')
-		{
-			return (0);
-		}
-		else
-			return (-1);
-	}
-	return (0);
-
 }

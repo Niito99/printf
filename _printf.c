@@ -30,30 +30,21 @@ int _printf(const char *format, ...)
 		else
 		{
 			const char *ch = format;
+
 			value += check_args(ch);
 			format++;
 			if (*format == '\0')
 				break;
 			if (*format == '!' || *format == 'K')
 				value += convert4(format);
-
 			if (*format == '%')
-			{
 				value += convert();
-			}
 			else if (*format == 'c')
-			{
 				value += convert1(list);
-			}
-
 			else if (*format == 's')
-			{
 				value += convert2(list);
-			}
 			if (*format == 'd' || *format == 'i')
-			{
 				value += convert3(list);
-			}
 
 		}
 		format++;
