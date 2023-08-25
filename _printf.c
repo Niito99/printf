@@ -29,7 +29,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			value += check_args(list);
+			const char *ch = format;
+			value += check_args(ch);
 			format++;
 			if (*format == '\0')
 				break;
