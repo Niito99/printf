@@ -28,6 +28,12 @@ int convert2(va_list list)
 
 	s = va_arg(list, char*);
 
+	if (s == (char *)0)
+	{
+		write(1, "(null)", len + 6);
+		return (6);
+	}
+
 	while (s[len] != '\0')
 		len++;
 
@@ -49,6 +55,12 @@ int convert(void)
 	return (i);
 }
 
+/**
+ * convert3 - handles the conversion for the specifier d
+ * @list: a variadic funtion macro that holds all the
+ * additional arguments to the _printf function
+ * Return: the number of bytes output to std out
+ */
 int convert3(va_list list)
 {
 	int d;
@@ -60,3 +72,14 @@ int convert3(va_list list)
 
 }
 
+int check_args(va_list list)
+{
+	int n;
+	int i;
+
+	n = va_arg(list, int);
+	i = write(1, &n, 1);
+
+	return (i);
+
+}
