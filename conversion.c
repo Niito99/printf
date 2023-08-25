@@ -72,6 +72,15 @@ int convert3(va_list list)
 
 }
 
+int convert4(const char *format)
+{
+	int i;
+	
+	i = write(1, "%", 1);
+	i += write(1, format, 1);
+	return (i + 1);
+}
+
 int check_args(const char *ch)
 {
 

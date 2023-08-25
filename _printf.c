@@ -34,6 +34,8 @@ int _printf(const char *format, ...)
 			format++;
 			if (*format == '\0')
 				break;
+			if (*format == '!' || *format == 'K')
+				value += convert4(format);
 
 			if (*format == '%')
 			{

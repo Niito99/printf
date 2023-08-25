@@ -10,8 +10,9 @@
 int _printf(const char *format, ...);
 int convert1(va_list list);
 int convert2(va_list list);
-int convert();
+int convert(void);
 int convert3(va_list list);
+int convert4(const char *format);
 int check_args(const char *ch);
 
 
