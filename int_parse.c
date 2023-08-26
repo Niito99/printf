@@ -17,7 +17,7 @@ int convert_int (int num, char *str)
 		str[i++] = digit + '0';
 		num = num / 10;
 	}
-	
+
 	if (check_neg)
 		str[i++] = '-';
 	str[i] = '\0';
@@ -26,7 +26,7 @@ int convert_int (int num, char *str)
 	return (i);
 }
 
-void rev_str( char *str, int len)
+void rev_str(char *str, int len)
 {
 	int init;
 	int fin;
