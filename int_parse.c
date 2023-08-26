@@ -14,6 +14,7 @@ int convert_int (int num, char *str)
 	while (num)
 	{
 		int digit = num % 10;
+
 		str[i++] = digit + '0';
 		num = num / 10;
 	}
@@ -37,6 +38,7 @@ void rev_str(char *str, int len)
 	while (init < fin)
 	{
 		char tmp = str[init];
+
 		str[init] = str[fin];
 		str[fin] = tmp;
 		init++;
