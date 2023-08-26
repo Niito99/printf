@@ -31,7 +31,7 @@ int convert_int (int num, char *str)
 	str[i] = '\0';
 	rev_str(str, i);
 
-	return (i);
+	return (i + 1);
 }
 
 /**
