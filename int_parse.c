@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * convert_int - changes an integer to a string
+ * @num: an integer
+ * @str: a string
+ * Return: length of string
+ */
+
 int convert_int (int num, char *str)
 {
 	int i = 0;
@@ -26,6 +33,13 @@ int convert_int (int num, char *str)
 
 	return (i);
 }
+
+/**
+ * rev_str-reveses a string
+ * @str: a string
+ * @len: an int
+ * Return: no return value
+ */
 
 void rev_str(char *str, int len)
 {
