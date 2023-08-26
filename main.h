@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include <stddef.h>
+#include <stdlib.h>
 
 /* Prototypes */
 int _printf(const char *format, ...);

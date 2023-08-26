@@ -67,9 +67,12 @@ int convert3(va_list list)
 	int i;
 	char *ch;
 
+	ch = malloc(20);
+
 	d = va_arg(list, int);
 	i = convert_int(d, ch);
 	write(1, ch, i);
+	free(ch);
 	
 	return (i);
 
