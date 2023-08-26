@@ -74,12 +74,12 @@ int convert3(va_list list)
 		_printf("Memory allocation failed");
 		return (0);
 	}
-
 	d = va_arg(list, int);
 	i = convert_int(d, ch);
+	if (*ch == '\0')
+		return (i);
 	write(1, ch, i);
 	free(ch);
-	
 	return (i);
 
 
