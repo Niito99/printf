@@ -28,7 +28,7 @@ int convert_int (int num, char *str)
 
 	if (check_neg)
 		str[i++] = '-';
-	str[i++] = '\0';
+	str[i] = '\0';
 	rev_str(str, i);
 
 	return (i);
