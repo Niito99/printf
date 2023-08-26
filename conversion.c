@@ -64,10 +64,14 @@ int convert(void)
 int convert3(va_list list)
 {
 	int d;
+	int i;
+	char *ch;
 
 	d = va_arg(list, int);
-	write(1, &d, 1);
-	return (1);
+	i = convert_int(d, ch);
+	write(1, ch, i);
+	
+	return (i);
 
 
 }

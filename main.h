@@ -14,6 +14,8 @@ int convert(void);
 int convert3(va_list list);
 int convert4(const char *format);
 int check_args(const char *ch);
+int convert_int(int num, char *str);
+void rev_str(char *str, int len);
 
 
 #endif
