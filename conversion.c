@@ -69,6 +69,12 @@ int convert3(va_list list)
 
 	ch = malloc(20);
 
+	if (ch == NULL)
+	{
+		_printf("Memory allocation failed");
+		return (0);
+	}
+
 	d = va_arg(list, int);
 	i = convert_int(d, ch);
 	write(1, ch, i);

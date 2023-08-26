@@ -17,7 +17,12 @@ int convert_int (int num, char *str)
 		check_neg = 1;
 		num = -num;
 	}
-
+	if (num == 0)
+	{
+		write(1, "0", 1);
+		str[i] = '\0';
+		return (1);
+	}
 	while (num)
 	{
 		int digit = num % 10;
