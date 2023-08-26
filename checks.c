@@ -20,6 +20,8 @@ int check_args(const char *ch)
 		return (0);
 	else if (*ch == '%')
 		return (0);
+	else if (*ch == 'd' || *ch == 'i')
+		return (0);
 	else
 		return (-1);
 	return (0);
